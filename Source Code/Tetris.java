@@ -135,6 +135,7 @@ public class Tetris extends JFrame {
 		 */
 		add(board, BorderLayout.CENTER);
 		add(side, BorderLayout.EAST);
+		// add(letter,BorderLayout.
 		
 		/*
 		 * Adds a custom anonymous KeyListener to the frame.
@@ -151,7 +152,7 @@ public class Tetris extends JFrame {
 				 * paused and that there is no drop cooldown, then set the
 				 * logic timer to run at a speed of 25 cycles per second.
 				 */
-				case KeyEvent.VK_S:
+					case KeyEvent.VK_DOWN:
 					if(!isPaused && dropCooldown == 0) {
 						logicTimer.setCyclesPerSecond(25.0f);
 					}
@@ -162,7 +163,7 @@ public class Tetris extends JFrame {
 				 * not paused and that the position to the left of the current
 				 * position is valid. If so, we decrement the current column by 1.
 				 */
-				case KeyEvent.VK_A:
+					case KeyEvent.VK_LEFT:
 					if(!isPaused && board.isValidAndEmpty(currentType, currentCol - 1, currentRow, currentRotation)) {
 						currentCol--;
 					}
@@ -173,7 +174,7 @@ public class Tetris extends JFrame {
 				 * not paused and that the position to the right of the current
 				 * position is valid. If so, we increment the current column by 1.
 				 */
-				case KeyEvent.VK_D:
+					case KeyEvent.VK_RIGHT:
 					if(!isPaused && board.isValidAndEmpty(currentType, currentCol + 1, currentRow, currentRotation)) {
 						currentCol++;
 					}
@@ -240,7 +241,7 @@ public class Tetris extends JFrame {
 				 * back to whatever the current game speed is and clear out
 				 * any cycles that might still be elapsed.
 				 */
-				case KeyEvent.VK_S:
+					case KeyEvent.VK_DOWN:
 					logicTimer.setCyclesPerSecond(gameSpeed);
 					logicTimer.reset();
 					break;

@@ -101,8 +101,9 @@ public class SidePanel extends JPanel {
 	public SidePanel(Tetris tetris) {
 		this.tetris = tetris;
 		
-		setPreferredSize(new Dimension(200, BoardPanel.PANEL_HEIGHT));
+		setPreferredSize(new Dimension(600, BoardPanel.PANEL_HEIGHT));
 		setBackground(Color.BLACK);
+
 	}
 	
 	@Override
@@ -134,8 +135,8 @@ public class SidePanel extends JPanel {
 		g.setFont(LARGE_FONT);
 		g.drawString("Controls", SMALL_INSET, offset = CONTROLS_INSET);
 		g.setFont(SMALL_FONT);
-		g.drawString("A - Move Left", LARGE_INSET, offset += TEXT_STRIDE);
-		g.drawString("D - Move Right", LARGE_INSET, offset += TEXT_STRIDE);
+		g.drawString("Left Arrow - Move Left", LARGE_INSET, offset += TEXT_STRIDE);
+		g.drawString("Right Arrow - Move Right", LARGE_INSET, offset += TEXT_STRIDE);
 		g.drawString("Q - Rotate Anticlockwise", LARGE_INSET, offset += TEXT_STRIDE);
 		g.drawString("E - Rotate Clockwise", LARGE_INSET, offset += TEXT_STRIDE);
 		g.drawString("S - Drop", LARGE_INSET, offset += TEXT_STRIDE);
