@@ -179,18 +179,6 @@ public class Tetris extends JFrame {
 						currentCol++;
 					}
 					break;
-					
-				/*
-				 * Rotate Anticlockwise - When pressed, check to see that the game is not paused
-				 * and then attempt to rotate the piece anticlockwise. Because of the size and
-				 * complexity of the rotation code, as well as it's similarity to clockwise
-				 * rotation, the code for rotating the piece is handled in another method.
-				 */
-				case KeyEvent.VK_Q:
-					if(!isPaused) {
-						rotatePiece((currentRotation == 0) ? 3 : currentRotation - 1);
-					}
-					break;
 				
 				/*
 			     * Rotate Clockwise - When pressed, check to see that the game is not paused
@@ -198,7 +186,7 @@ public class Tetris extends JFrame {
 				 * complexity of the rotation code, as well as it's similarity to anticlockwise
 				 * rotation, the code for rotating the piece is handled in another method.
 				 */
-				case KeyEvent.VK_E:
+					case KeyEvent.VK_UP:
 					if(!isPaused) {
 						rotatePiece((currentRotation == 3) ? 0 : currentRotation + 1);
 					}
