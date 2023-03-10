@@ -37,7 +37,7 @@ public class Tetris extends JFrame {
 	 * The SidePanel instance.
 	 */
 	private SidePanel side;
-	
+	//sydcode
 	/**
 	 * Whether or not the game is paused.
 	 */
