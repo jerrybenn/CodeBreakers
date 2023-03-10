@@ -87,6 +87,11 @@ public class SidePanel extends JPanel {
 	/**
 	 * The color to draw the text and preview box in.
 	 */
+
+	/**
+	 * The Extra large font.
+	 */
+	private static final Font EXTRA_LARGE_FONT = new Font("Tahoma", Font.BOLD, 20);
 	private static final Color DRAW_COLOR = new Color(128, 192, 128);
 	
 	/**
@@ -146,7 +151,12 @@ public class SidePanel extends JPanel {
 		g.setFont(LARGE_FONT);
 		g.drawString("Next Piece:", SMALL_INSET, 70);
 		g.drawRect(SQUARE_CENTER_X - SQUARE_SIZE, SQUARE_CENTER_Y - SQUARE_SIZE, SQUARE_SIZE * 2, SQUARE_SIZE * 2);
-		
+
+		/*
+		 Draw word of the day
+		 */
+		g.setFont(EXTRA_LARGE_FONT);
+		g.drawString("Word Of The Day",350,70);
 		/*
 		 * Draw a preview of the next piece that will be spawned. The code is pretty much
 		 * identical to the drawing code on the board, just smaller and centered, rather
