@@ -106,7 +106,7 @@ public class SidePanel extends JPanel {
 	public SidePanel(Tetris tetris) {
 		this.tetris = tetris;
 		
-		setPreferredSize(new Dimension(600, BoardPanel.PANEL_HEIGHT));
+		setPreferredSize(new Dimension(300, BoardPanel.PANEL_HEIGHT));
 		setBackground(Color.BLACK);
 
 	}
@@ -156,26 +156,27 @@ public class SidePanel extends JPanel {
 		 Draw word of the day
 		 */
 		g.setFont(EXTRA_LARGE_FONT);
-		g.drawString("Word Of The Day",350,70);
+		g.drawString("Word Of The Day",SMALL_INSET,440);
 
 		/*
 		code for printing letters on screen
 		 */
-		g.setFont(SMALL_FONT);
+		g.setFont(LARGE_FONT);
 		if(tetris.getLevel() == 1){
-			g.drawString("H", 350, 90);
+			g.drawString("S", SMALL_INSET+5, 460);
 		};
 		if(tetris.getLevel() == 2){
-			g.drawString("H E",350, 90);
+			g.drawString("S M",SMALL_INSET+5, 460);
 		};
 		if(tetris.getLevel() == 3){
-			g.drawString("H E L",350, 90);
+			g.drawString("S M A",SMALL_INSET+5, 460);
 		};
 		if(tetris.getLevel() == 4){
-			g.drawString("H E L L",350, 90);
+			g.drawString("S M A S",SMALL_INSET+5, 460);
 		};
 		if(tetris.getLevel() == 5){
-			g.drawString("H E L L 0",350, 90);
+			g.drawString("S M A S H",SMALL_INSET+5, 460);
+			System.out.println("Congrats");
 		};
 
 		/*

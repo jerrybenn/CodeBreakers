@@ -113,7 +113,7 @@ public class BoardPanel extends JPanel {
 		this.tetris = tetris;
 		this.tiles = new TileType[ROW_COUNT][COL_COUNT];
 		
-		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
+		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT+ 30));
 		setBackground(Color.BLACK);
 	}
 	
