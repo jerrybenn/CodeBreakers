@@ -157,6 +157,27 @@ public class SidePanel extends JPanel {
 		 */
 		g.setFont(EXTRA_LARGE_FONT);
 		g.drawString("Word Of The Day",350,70);
+
+		/*
+		code for printing letters on screen
+		 */
+		g.setFont(SMALL_FONT);
+		if(tetris.getLevel() == 1){
+			g.drawString("H", 350, 90);
+		};
+		if(tetris.getLevel() == 2){
+			g.drawString("H E",350, 90);
+		};
+		if(tetris.getLevel() == 3){
+			g.drawString("H E L",350, 90);
+		};
+		if(tetris.getLevel() == 4){
+			g.drawString("H E L L",350, 90);
+		};
+		if(tetris.getLevel() == 5){
+			g.drawString("H E L L 0",350, 90);
+		};
+
 		/*
 		 * Draw a preview of the next piece that will be spawned. The code is pretty much
 		 * identical to the drawing code on the board, just smaller and centered, rather
