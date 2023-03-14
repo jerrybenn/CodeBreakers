@@ -10,7 +10,7 @@ public enum TileType {
 	/**
 	 * Piece TypeI.
 	 */
-	TypeI(new Color(BoardPanel.COLOR_MIN, BoardPanel.COLOR_MAX, BoardPanel.COLOR_MAX), 4, 4, 1, new boolean[][] {
+	TypeI(new Color(129, 231, 231), 4, 4, 1, new boolean[][] {
 		{
 			false,	false,	false,	false,
 			true,	true,	true,	true,
@@ -40,7 +40,7 @@ public enum TileType {
 	/**
 	 * Piece TypeJ.
 	 */
-	TypeJ(new Color(BoardPanel.COLOR_MIN, BoardPanel.COLOR_MIN, BoardPanel.COLOR_MAX), 3, 3, 2, new boolean[][] {
+	TypeJ(new Color(121, 121, 231), 3, 3, 2, new boolean[][] {
 		{
 			true,	false,	false,
 			true,	true,	true,
@@ -66,7 +66,7 @@ public enum TileType {
 	/**
 	 * Piece TypeL.
 	 */
-	TypeL(new Color(BoardPanel.COLOR_MAX, 127, BoardPanel.COLOR_MIN), 3, 3, 2, new boolean[][] {
+	TypeL(new Color(229, 169, 109), 3, 3, 2, new boolean[][] {
 		{
 			false,	false,	true,
 			true,	true,	true,
@@ -92,7 +92,7 @@ public enum TileType {
 	/**
 	 * Piece TypeO.
 	 */
-	TypeO(new Color(BoardPanel.COLOR_MAX, BoardPanel.COLOR_MAX, BoardPanel.COLOR_MIN), 2, 2, 2, new boolean[][] {
+	TypeO(new Color(222, 222, 112), 2, 2, 2, new boolean[][] {
 		{
 			true,	true,
 			true,	true,
@@ -114,7 +114,7 @@ public enum TileType {
 	/**
 	 * Piece TypeS.
 	 */
-	TypeS(new Color(BoardPanel.COLOR_MIN, BoardPanel.COLOR_MAX, BoardPanel.COLOR_MIN), 3, 3, 2, new boolean[][] {
+	TypeS(new Color(128, 217, 128), 3, 3, 2, new boolean[][] {
 		{
 			false,	true,	true,
 			true,	true,	false,
@@ -140,7 +140,7 @@ public enum TileType {
 	/**
 	 * Piece TypeT.
 	 */
-	TypeT(new Color(128, BoardPanel.COLOR_MIN, 128), 3, 3, 2, new boolean[][] {
+	TypeT(new Color(211, 104, 211), 3, 3, 2, new boolean[][] {
 		{
 			false,	true,	false,
 			true,	true,	true,
@@ -166,7 +166,7 @@ public enum TileType {
 	/**
 	 * Piece TypeZ.
 	 */
-	TypeZ(new Color(BoardPanel.COLOR_MAX, BoardPanel.COLOR_MIN, BoardPanel.COLOR_MIN), 3, 3, 2, new boolean[][] {
+	TypeZ(new Color(236, 106, 141), 3, 3, 2, new boolean[][] {
 		{
 			true,	true,	false,
 			false,	true,	true,
