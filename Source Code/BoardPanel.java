@@ -114,7 +114,7 @@ public class BoardPanel extends JPanel {
 		this.tiles = new TileType[ROW_COUNT][COL_COUNT];
 		
 		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT+ 30));
-		setBackground(Color.BLACK);
+		setBackground(Color.GREEN);
 	}
 	
 	/**

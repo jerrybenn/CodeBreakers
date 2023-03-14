@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.util.Random;
 
 import javax.swing.JPanel;
 
@@ -11,6 +12,7 @@ import javax.swing.JPanel;
  * @author Kanak Negi
  *
  */
+
 public class SidePanel extends JPanel {
 	
 	/**
@@ -98,6 +100,7 @@ public class SidePanel extends JPanel {
 	 * The Tetris instance.
 	 */
 	private Tetris tetris;
+	private Random rand = new Random();
 	
 	/**
 	 * Creates a new SidePanel and sets it's display properties.
@@ -109,8 +112,10 @@ public class SidePanel extends JPanel {
 		setPreferredSize(new Dimension(300, BoardPanel.PANEL_HEIGHT));
 		setBackground(Color.BLACK);
 
+
 	}
-	
+	int val = rand.nextInt(3);
+
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -161,22 +166,90 @@ public class SidePanel extends JPanel {
 		/*
 		code for printing letters on screen
 		 */
-		g.setFont(LARGE_FONT);
-		if(tetris.getLevel() == 1){
-			g.drawString("S", SMALL_INSET+5, 460);
+
+		if (val == 0) {
+			g.setFont(LARGE_FONT);
+			if (tetris.getLevel() == 1) {
+				g.drawString("S", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 2) {
+				g.drawString("S M", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 3) {
+				g.drawString("S M A", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 4) {
+				g.drawString("S M A S", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 5) {
+				g.drawString("S M A S H", SMALL_INSET + 5, 460);
+				try {
+					ProjectComm comm = new ProjectComm("codebreakers");
+					comm.sendCommand("Smash");
+				} catch (java.io.IOException ioe) {
+					System.out.println(ioe);
+				}
+			}
 		};
-		if(tetris.getLevel() == 2){
-			g.drawString("S M",SMALL_INSET+5, 460);
+		 if (val == 1) {
+			g.setFont(LARGE_FONT);
+			if (tetris.getLevel() == 1) {
+				g.drawString("C", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 2) {
+				g.drawString("C O", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 3) {
+				g.drawString("C O D", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 4) {
+				g.drawString("C O D E", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 5) {
+				g.drawString("C O D E R", SMALL_INSET + 5, 460);
+				try {
+					ProjectComm comm = new ProjectComm("codebreakers");
+					comm.sendCommand("Smash");
+				} catch (java.io.IOException ioe) {
+					System.out.println(ioe);
+				}
+			}
 		};
-		if(tetris.getLevel() == 3){
-			g.drawString("S M A",SMALL_INSET+5, 460);
-		};
-		if(tetris.getLevel() == 4){
-			g.drawString("S M A S",SMALL_INSET+5, 460);
-		};
-		if(tetris.getLevel() == 5){
-			g.drawString("S M A S H",SMALL_INSET+5, 460);
-			System.out.println("Congrats");
+		if (val == 2) {
+			g.setFont(LARGE_FONT);
+			if (tetris.getLevel() == 1) {
+				g.drawString("H", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 2) {
+				g.drawString("H A", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 3) {
+				g.drawString("H A P", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 4) {
+				g.drawString("H A P P", SMALL_INSET + 5, 460);
+			}
+			;
+			if (tetris.getLevel() == 5) {
+				g.drawString("H A P P Y", SMALL_INSET + 5, 460);
+				try {
+					ProjectComm comm = new ProjectComm("codebreakers");
+					comm.sendCommand("Smash");
+				} catch (java.io.IOException ioe) {
+					System.out.println(ioe);
+				}
+			}
 		};
 
 		/*
