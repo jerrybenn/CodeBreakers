@@ -3,7 +3,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 
-import javax.swing.JPanel;
+import javax.swing.*;
 
 /**
  * The {@code BoardPanel} class is responsible for displaying the game grid and
@@ -84,11 +84,11 @@ public class BoardPanel extends JPanel {
 	 * The total height of the panel.
 	 */
 	public static final int PANEL_HEIGHT = VISIBLE_ROW_COUNT * TILE_SIZE + BORDER_WIDTH * 2;
-	
+
 	/**
 	 * The larger font to display.
 	 */
-	private static final Font LARGE_FONT = new Font("Tahoma", Font.BOLD, 16);
+	private static final Font LARGE_FONT = new Font("HeadLineA", Font.BOLD, 55);
 
 	/**
 	 * The smaller font to display.
@@ -291,7 +291,7 @@ public class BoardPanel extends JPanel {
 			g.drawString(msg, CENTER_X - g.getFontMetrics().stringWidth(msg) / 2, CENTER_Y);
 		} else if(tetris.isNewGame() || tetris.isGameOver()) {
 			g.setFont(LARGE_FONT);
-			g.setColor(Color.WHITE);
+			g.setColor(Color.LIGHT_GRAY);
 			
 			/*
 			 * Because both the game over and new game screens are nearly identical,
@@ -369,7 +369,7 @@ public class BoardPanel extends JPanel {
 			 * Draw the background grid above the pieces (serves as a useful visual
 			 * for players, and makes the pieces look nicer by breaking them up.
 			 */
-			g.setColor(Color.DARK_GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			for(int x = 0; x < COL_COUNT; x++) {
 				for(int y = 0; y < VISIBLE_ROW_COUNT; y++) {
 					g.drawLine(0, y * TILE_SIZE, COL_COUNT * TILE_SIZE, y * TILE_SIZE);
@@ -381,7 +381,7 @@ public class BoardPanel extends JPanel {
 		/*
 		 * Draw the outline.
 		 */
-		g.setColor(Color.WHITE);
+		g.setColor(Color.LIGHT_GRAY);
 		g.drawRect(0, 0, TILE_SIZE * COL_COUNT, TILE_SIZE * VISIBLE_ROW_COUNT);
 	}
 	
