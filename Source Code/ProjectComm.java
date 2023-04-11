@@ -107,14 +107,14 @@ public class ProjectComm {
 	}
 	
 	public static void main(String[] args) throws IOException{
-		if (args.length < 1){
-			System.out.println("SYNOPSIS: java ProjectComm "+" <hostname>");
+		/*if (args.length < 1){
+			//System.out.println("SYNOPSIS: java ProjectComm "+" <hostname>");
 			System.exit(1);
 		}
-		ProjectComm comm = new ProjectComm("codebreakers");
-		System.out.println("Sending hello ...");
-		System.out.println(comm.sendCommand("Smash"));
+		*/
 
+		ProjectComm comm = new ProjectComm("codebreakers");
+		System.out.println(comm.sendCommand("Smash"));
 		comm.close();
 	}  
 }  

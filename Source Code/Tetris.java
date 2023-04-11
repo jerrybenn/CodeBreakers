@@ -1,16 +1,43 @@
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Random;
+import javax.swing.*;
+import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
+/*
+class buttonExample{
+	public static void main(String[] args) {
+		JFrame f = new JFrame("Tetris Menu");
+		JButton b = new JButton("Start Game");
 
+		b.setBounds(700,400,125,40);
+
+		//JLabel MENU = CommonConstants.loadImage()
+		b.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				new Tetris().setVisible(true);
+
+			}
+		});
+		f.add(b);
+		f.setSize(1100,940);
+		f.setLayout(null);
+		f.setVisible(true);
+
+
+	}
+}
+/*
 /**
  * The {@code Tetris} class is responsible for handling much of the game logic and
  * reading user input.
  * @author Kanak Negi
  *
  */
+
 public class Tetris extends JFrame {
 	
 	/**
@@ -115,7 +142,8 @@ public class Tetris extends JFrame {
 	 * Creates a new Tetris instance. Sets up the window's properties,
 	 * and adds a controller listener.
 	 */
-	private Tetris() {
+	Tetris() {
+
 		/*
 		 * Set the basic properties of the window.
 		 */
@@ -247,6 +275,7 @@ public class Tetris extends JFrame {
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
+
 	
 	/**
 	 * Starts the game running. Initializes everything and enters the game loop.
