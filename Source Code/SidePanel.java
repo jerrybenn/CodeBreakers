@@ -1,10 +1,8 @@
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
+import java.awt.*;
 import java.util.Random;
 
-import javax.swing.JPanel;
+import javax.swing.*;
+import javax.swing.JButton;
 
 /**
  * The {@code SidePanel} class is responsible for displaying various information
@@ -13,11 +11,14 @@ import javax.swing.JPanel;
  *
  */
 
+
+
 public class SidePanel extends JPanel {
 	
 	/**
 	 * Serial Version UID.
 	 */
+
 	private static final long serialVersionUID = 2181495598854992747L;
 
 	/**
@@ -95,13 +96,17 @@ public class SidePanel extends JPanel {
 	 */
 	private static final Font EXTRA_LARGE_FONT = new Font("Tahoma", Font.BOLD, 20);
 	private static final Color DRAW_COLOR = new Color(128, 192, 128);
-	
+
+
+
 	/**
 	 * The Tetris instance.
 	 */
 	private Tetris tetris;
 	private Random rand = new Random();
-	
+
+
+
 	/**
 	 * Creates a new SidePanel and sets it's display properties.
 	 * @param tetris The Tetris instance to use.
@@ -115,10 +120,13 @@ public class SidePanel extends JPanel {
 
 	}
 	int val = rand.nextInt(3);
-
+	
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
+
+
+
 		
 		//Set the color for drawing.
 		g.setColor(DRAW_COLOR);
@@ -157,9 +165,14 @@ public class SidePanel extends JPanel {
 		g.drawString("Next Piece:", SMALL_INSET, 70);
 		g.drawRect(SQUARE_CENTER_X - SQUARE_SIZE, SQUARE_CENTER_Y - SQUARE_SIZE, SQUARE_SIZE * 2, SQUARE_SIZE * 2);
 
+		//g.setColor(Color.BLUE);
+		//g.fillRect(LARGE_INSET,380,80,25);
+		//g.drawRect(SMALL_INSET,400,5,10);
+
 		/*
 		 Draw word of the day
 		 */
+		g.setColor(DRAW_COLOR);
 		g.setFont(EXTRA_LARGE_FONT);
 		g.drawString("Word Of The Day",SMALL_INSET,440);
 
@@ -257,6 +270,8 @@ public class SidePanel extends JPanel {
 		 * identical to the drawing code on the board, just smaller and centered, rather
 		 * than constrained to a grid.
 		 */
+
+
 		TileType type = tetris.getNextPieceType();
 		if(!tetris.isGameOver() && type != null) {
 			/*
@@ -324,5 +339,5 @@ public class SidePanel extends JPanel {
 			g.drawLine(x + i, y, x + i, y + TILE_SIZE - i - 1);
 		}
 	}
-	
+
 }
